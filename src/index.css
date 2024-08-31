@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+}
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/spacepclong.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: repeat-y;
+    animation: moveBackground 120s linear infinite;
+}
+
+@keyframes moveBackground {
+    from {
+        background-position-y: 0%, 100%;
+      }
+      to {
+        background-position-y: -100%, -200%;
+      }
+}
